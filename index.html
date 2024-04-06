@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>CSS Class</title>
+		<!-- <link rel="stylesheet" type="text/css" href="style.css"> -->
+		<style type="text/css">
+			/*div {
+				width: 70%;
+				margin-left: 20% ;
+				background: red;
+			}*/
+		</style>
+		<script src="vue.js"></script>
+	</head>
+	<body>
+		<div id="app">
+			{{name}}
+			<hr>
+			<!-- <form> -->
+				<p>Fisrt Number<input type="text" @change="firstInput(first_number);" v-model="first_number" value="" /></p>
+				<p>Second Number<input type="text" v-model="second_number" value="" /></p>
+
+				<input type="submit" v-on:click="addition" name="addition" value="Addition">
+				<button @click="add(first_number,second_number);" >addition</button>
+				<input type="submit" name="subtration" value="subtration">
+				<input type="submit" name="multiplication" value="multiplication">
+				<input type="submit" name="division" value="division">
+				<input type="submit" name="modulor" value="modulor">
+
+				<p>First number:{{ first_number }}</p>
+				<p>Second number:{{ second_number }}</p>
+				<p>Output: <label>{{result}}</label></p>
+
+
+				<p>Quantity: <input type="text" @change="getBal(qty);" v-model="qty" /> </p>
+				<p>Balance: {{ balance }}</p>
+			<!-- </form> -->
+			
+
+		</div>
+	 	
+
+	 	<script type="text/javascript" src="app.js"></script>
+	</body>
+</html>
